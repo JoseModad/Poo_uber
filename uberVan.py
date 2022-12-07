@@ -1,12 +1,11 @@
-from car import Car
+from uberAdvanced import UberAdvanced
 
+class UberVan (UberAdvanced):
+    def __init__ (self, id, license, driver, passengers, typeCarAccepted, seatsMaterialal):
+        super().__init__(id, license, driver, passengers, typeCarAccepted, seatsMaterialal)
 
-class UberVan(Car):
-    typeCarAccepted = []
-    seatMaterial = []
-    
-    
-    def __init__(self, license, driver, typeCarAccepted, seatMaterial):
-        super().__init__(license, driver)
-        self.tytypeCarAccepted = typeCarAccepted
-        self.seatMseatMaterial = seatMaterial
+    def setPassengers (self, passengers):
+        if (passengers >= 6):
+            self._passengers = passengers
+        else:
+            print("Car Passengers must be 6 or more")

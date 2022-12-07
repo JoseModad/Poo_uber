@@ -1,12 +1,5 @@
-from car import Car
+from uberAdvanced import UberAdvanced
 
-
-class UberBlack(Car):
-    typeCarAccepted = []
-    seatMaterial = []
-    
-    
-    def __init__(self, license, driver, typeCarAccepted, seatMaterial):
-        super().__init__(license, driver)
-        self.tytypeCarAccepted = typeCarAccepted
-        self.seatMseatMaterial = seatMaterial
+class UberBlack (UberAdvanced):
+    def __init__ (self, id, license, driver, passengers, typeCarAccepted, seatsMaterial):
+        super().__init__(id, license, driver, passengers, typeCarAccepted, seatsMaterial)
